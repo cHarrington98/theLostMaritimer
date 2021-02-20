@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/theLostMaritimer/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/theLostMaritimer/static/js/main.b98227a4.chunk.js",
-    "main.js.map": "/theLostMaritimer/static/js/main.b98227a4.chunk.js.map",
+    "main.js": "/theLostMaritimer/static/js/main.757db20c.chunk.js",
+    "main.js.map": "/theLostMaritimer/static/js/main.757db20c.chunk.js.map",
     "runtime-main.js": "/theLostMaritimer/static/js/runtime-main.5f7ae1f5.js",
     "runtime-main.js.map": "/theLostMaritimer/static/js/runtime-main.5f7ae1f5.js.map",
     "static/js/2.01576fc3.chunk.js": "/theLostMaritimer/static/js/2.01576fc3.chunk.js",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.5f7ae1f5.js",
     "static/js/2.01576fc3.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.b98227a4.chunk.js"
+    "static/js/main.757db20c.chunk.js"
   ]
 }
