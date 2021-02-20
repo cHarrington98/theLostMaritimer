@@ -18,7 +18,6 @@ import Container from "@material-ui/core/Container";
 // Components
 import Header from "./Header";
 import Footer from "./Footer";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Blog from "../blogs/Blog";
 import UnderConstruction from "../shared-components/UnderConstruction";
 
@@ -49,27 +48,39 @@ const social = [
 ];
 
 export default function Home() {
+  // Used to set the page content
+  // I originally wanted to use react router
+  // but gh pages only supports single page for free :(
+  const [page, setPage] = React.useState("");
+  let Page;
+  switch (page) {
+    case "videos":
+      Page = <Videos />;
+      break;
+    case "podcasts":
+      Page = <Podcasts />;
+      break;
+    case "travel-plans":
+      Page = <TravelPlans />;
+      break;
+    case "blog":
+      Page = <Blog />;
+      break;
+    default:
+      Page = <Blog />;
+      break;
+  }
+
   return (
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="lg">
-        <Header title="The Lost Maritimer" sections={sections} />
-        <Router>
-          <Switch>
-            <Route path="/videos">
-              <Videos />
-            </Route>
-            <Route path="/podcasts">
-              <Podcasts />
-            </Route>
-            <Route path="/travel-plans">
-              <TravelPlans />
-            </Route>
-            <Route path={["/blog", ""]}>
-              <Blog />
-            </Route>
-          </Switch>
-        </Router>
+        <Header
+          title="The Lost Maritimer"
+          sections={sections}
+          setPage={setPage}
+        />
+        {Page}
       </Container>
       <Footer
         title="The Lost Maritimer"
